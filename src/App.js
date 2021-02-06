@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Provider as ReduxProvider} from 'react-redux';
+import {BrowserRouter as Router} from "react-router-dom";
+import "jquery";
+import "bootstrap/dist/css/bootstrap.min.css"
 
-function App() {
+import store from './redux/store';
+import Switcher from "./switcher";
+import { FirebaseContext } from './contexts/FirebaseContext';
+import { firebase, firebaseConfig } from '../firebase'
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <ReduxProvider store={store}>
+        <FirebaseContext.Provider value={{ firebase, firebaseConfig }} >
+          <Router>
+            <div>
+              {
+                <Switcher />
+              }
+            </div>
+          </Router>
+        </FirebaseContext.Provider>
+      </ReduxProvider>
+  )
+};
 
 export default App;
