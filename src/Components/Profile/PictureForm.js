@@ -6,7 +6,7 @@ import "./Profile.css";
 import * as ROUTES from "../../constants/routes";
 import * as actions from "../../redux/actions";
 import {NO_PIC_IMAGE} from "../../constants/defaults";
-import {defaultNoPicImage} from "../../../firebase";
+import {defaultNoPicImage} from "../../firebase";
 
 export default function PictureForm() {
     const dispatch = useDispatch();
@@ -29,7 +29,7 @@ export default function PictureForm() {
         return function abort() {
             dispatch(actions.resetProfileErrors());
         }
-    }, [curPhotoUrl]);
+    }, [curPhotoUrl, dispatch]);
 
     const handleCancelClick = (e) => {
         setRemovePicture(false);

@@ -1,4 +1,4 @@
-import firebase from "../../../../firebase";
+import firebase from "../../../firebase";
 // A loading image URL.
 import {LOADING_IMAGE_URL} from "../../../constants/defaults";
 

@@ -1,6 +1,6 @@
 import * as actionTypes from "../../consts/action-types";
 import * as actions from "../../actions";
-import {defaultNoPicImage} from "../../../../firebase";
+import {defaultNoPicImage} from "../../../firebase";
 
 /**
  * To avoid code repetition in profile middleware.

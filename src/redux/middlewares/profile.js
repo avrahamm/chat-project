@@ -1,5 +1,5 @@
 import * as actionTypes from "../consts/action-types";
-import {defaultNoPicImage, firebase} from "../../../firebase";
+import {defaultNoPicImage, firebase} from "../../firebase";
 import {getUpdateProfileData} from "./utils/profile";
 import * as actions from "../actions";
 

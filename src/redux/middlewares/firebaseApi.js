@@ -1,5 +1,5 @@
 import * as actionTypes from "../consts/action-types";
-import firebase from "../../../firebase";
+import firebase from "../../firebase";
 
 import {
     addMessageDocument

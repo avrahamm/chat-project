@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import store from './redux/store';
 import Switcher from "./switcher";
 import { FirebaseContext } from './contexts/FirebaseContext';
-import { firebase, firebaseConfig } from '../firebase'
+import { firebase, firebaseConfig } from './firebase'
 
 const App = () => {
 

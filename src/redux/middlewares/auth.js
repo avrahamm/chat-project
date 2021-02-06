@@ -1,6 +1,6 @@
 import * as actionTypes from "../consts/action-types";
 import * as actions from "../actions";
-import { firebase, defaultNoPicImage } from "../../../firebase";
+import { firebase, defaultNoPicImage } from "../../firebase";
 
 const auth = ({dispatch}) => next => action => {
     const authActions = [

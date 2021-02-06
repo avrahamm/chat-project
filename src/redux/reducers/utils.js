@@ -1,4 +1,4 @@
-import {firebaseConfig} from "../../../firebase";
+import {firebaseConfig} from "../../firebase";
 
 export function initUserIdToUserData(users) {
   let userIdToUserData = {};
