@@ -30,6 +30,8 @@ jobs:
       run: |
         yarn install
         yarn build
+        env:
+            CI: ""
     - name: Archive Build
       uses: actions/upload-artifact@v2
       with:
