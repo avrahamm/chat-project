@@ -25,11 +25,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm install -g yarn
-    - name: yarn install, build and test
+    - name: npm install, build and test
       run: |
-        yarn install
-        CI= yarn build
+        npm install
+        CI= npm run build
         
     - name: Archive Build
       uses: actions/upload-artifact@v2
